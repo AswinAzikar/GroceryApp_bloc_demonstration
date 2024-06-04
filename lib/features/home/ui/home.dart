@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
                     icon: Icon(Icons.favorite_border)),
                 IconButton(
                     onPressed: () {
-                      HomeProductCartButtonClickedEvent();
+                      HomeCartButtonNavigateEvent;
                     },
                     icon: Icon(Icons.shopping_bag_outlined))
               ],
