@@ -11,20 +11,25 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final homeBloc = HomeBloc();
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<HomeBloc, HomeState>(
-      bloc: homeBloc,
-      listener: (context, state) {
-        // TODO: implement listener
-      },
-      builder: (context, state) {
-        return Scaffold(
-          appBar: AppBar(
-            title: Text("Grocery"),
-          ),
-        );
-      },
-    );
+        bloc: homeBloc,
+        // listenWhen: (previous, current) {} ,
+        // buildWhen: (previous, current) {} ,
+        listener: (context, state) {},
+        builder: (context, state) {
+          return Scaffold(
+            appBar: AppBar(
+              title: Text("Grocery"),
+              actions: [
+                IconButton(onPressed: () {}, icon: Icon(Icons.favorite_border)),
+                IconButton(
+                    onPressed: () {}, icon: Icon(Icons.shopping_bag_outlined))
+              ],
+            ),
+          );
+        });
   }
 }
