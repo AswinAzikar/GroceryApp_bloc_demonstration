@@ -27,7 +27,7 @@ class _HomeState extends State<Home> {
               actions: [
                 IconButton(
                     onPressed: () {
-                      HomeProductWishlistButtonClickedEvent();
+                      HomeProductWishlistButtonNavigateEvent();
                     },
                     icon: Icon(Icons.favorite_border)),
                 IconButton(
